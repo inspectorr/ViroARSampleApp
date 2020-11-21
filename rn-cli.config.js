@@ -16,15 +16,15 @@ module.exports = {
   getProjectRoots() {
     return this._getRoots();
   },
-
+  
   getAssetRoots() {
     return this._getRoots();
   },
-
+  
   getAssetExts() {
-    return ["obj", "mtl", "JPG", "vrx"];
+    return ["obj", "mtl", "JPG", "vrx", "hdr", "gltf", "glb", "bin", "arobject"];
   },
-
+  
   _getRoots() {
     // match on either path separator
     if (__dirname.match(/node_modules[\/\\]react-native[\/\\]packager$/)) {
@@ -37,6 +37,5 @@ module.exports = {
       return [path.resolve(__dirname, '.')];
     }
   },
-
+  
 };
-
